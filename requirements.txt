@@ -1,0 +1,12 @@
+amqp==1.4.9
+anyjson==0.3.3
+billiard==3.3.0.23
+celery==3.1.25
+Django==1.8.2
+django-celery==3.1.17
+django-redis-sessions==0.6.1
+django-tinymce==2.6.0
+kombu==3.0.37
+PyMySQL==0.9.3
+pytz==2018.9
+redis==3.2.0
