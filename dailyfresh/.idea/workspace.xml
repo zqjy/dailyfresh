@@ -2,39 +2,80 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7dcd367b-abcb-427c-bd28-f4969af559c9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/cart/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/cart/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/cart/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/cart/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/cart/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/cart/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/cart/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/goods/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/goods/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/goods/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/goods/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/goods/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/goods/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/goods/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/order/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/order/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/order/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/order/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/order/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/order/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/order/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/user/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/user/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/user/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/user/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/user/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/user/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db/base_model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dailyfresh/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/dailyfresh/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dailyfresh/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/dailyfresh/settings.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/cart.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/reset.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/detail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/adv01.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/adv02.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/banner01.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/banner02.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/banner03.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/banner04.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/banner05.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/banner06.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/down.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/fruit.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/goods.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/goods/goods001.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/goods/goods002.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/goods/goods003.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/goods/goods004.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/goods/goods005.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/goods/goods006.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/goods/goods007.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/goods/goods008.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/goods/goods009.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/goods/goods010.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/goods/goods011.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/goods/goods012.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/goods/goods013.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/goods/goods014.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/goods/goods015.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/goods/goods016.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/goods/goods017.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/goods/goods018.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/goods/goods019.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/goods/goods020.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/goods/goods021.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/goods02.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/goods_detail.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/icons.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/icons02.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/interval_line.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/left_bg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/login_banner.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/logo02.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/pay_icons.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/register_banner.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/shop_cart.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/slide.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/slide02.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/slide03.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/slide04.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/jquery-1.12.4.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/jquery-ui.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/jquery.cookie.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/register.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/slide.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/place_order.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/register.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/user_center_info.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/user_center_order.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/user_center_site.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/goods/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/goods/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/goods/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/goods/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/user/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/user/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/user/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/user/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dailyfresh/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/dailyfresh/urls.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -52,35 +93,76 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="271" />
+          <entry key="html" value="171" />
+          <entry key="py" value="1254" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="271" />
+          <entry key="HTML" value="171" />
+          <entry key="Python" value="1254" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="8" />
+          <entry key="css" value="1" />
+          <entry key="html" value="6" />
+          <entry key="py" value="13" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Python" value="8" />
+          <entry key="CSS" value="1" />
+          <entry key="HTML" value="6" />
+          <entry key="Python" value="13" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dailyfresh/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="229">
+            <state relative-caret-position="-230">
               <caret line="87" column="21" selection-start-line="87" selection-start-column="21" selection-end-line="87" selection-end-column="21" />
               <folding>
                 <element signature="e#383#392#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/apps/user/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+              <folding>
+                <element signature="e#0#32#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/register.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="348">
+              <caret line="58" column="25" selection-start-line="58" selection-start-column="25" selection-end-line="58" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/apps/user/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="28" column="8" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="8" />
+              <folding>
+                <element signature="e#0#45#0" expanded="true" />
+                <marker date="1551865269295" expanded="true" signature="229:249" ph="..." />
+                <marker date="1551865269295" expanded="true" signature="276:285" ph="..." />
               </folding>
             </state>
           </provider>
@@ -104,8 +186,15 @@
         <option value="$PROJECT_DIR$/dailyfresh/__init__.py" />
         <option value="$PROJECT_DIR$/db/base_model.py" />
         <option value="$PROJECT_DIR$/apps/user/models.py" />
-        <option value="$PROJECT_DIR$/apps/user/urls.py" />
         <option value="$PROJECT_DIR$/dailyfresh/settings.py" />
+        <option value="$PROJECT_DIR$/dailyfresh/urls.py" />
+        <option value="$PROJECT_DIR$/apps/goods/views.py" />
+        <option value="$PROJECT_DIR$/apps/goods/urls.py" />
+        <option value="$PROJECT_DIR$/templates/index.html" />
+        <option value="$PROJECT_DIR$/apps/user/urls.py" />
+        <option value="$PROJECT_DIR$/templates/login.html" />
+        <option value="$PROJECT_DIR$/templates/register.html" />
+        <option value="$PROJECT_DIR$/apps/user/views.py" />
       </list>
     </option>
   </component>
@@ -142,7 +231,23 @@
             <path>
               <item name="dailyfresh" type="b2602c69:ProjectViewProjectNode" />
               <item name="dailyfresh" type="462c0819:PsiDirectoryNode" />
+              <item name="apps" type="462c0819:PsiDirectoryNode" />
+              <item name="user" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dailyfresh" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dailyfresh" type="462c0819:PsiDirectoryNode" />
+              <item name="dailyfresh" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dailyfresh" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dailyfresh" type="462c0819:PsiDirectoryNode" />
               <item name="db" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dailyfresh" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dailyfresh" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -160,6 +265,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/templates" />
+      <recent name="$PROJECT_DIR$/static" />
       <recent name="$PROJECT_DIR$/apps" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -218,6 +325,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="-11" width="1653" height="939" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24953446" />
@@ -279,25 +387,88 @@
     <entry file="file://$PROJECT_DIR$/apps/user/tests.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/user/views.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/apps/order/urls.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/user/urls.py">
+    <entry file="file://$PROJECT_DIR$/static/css/reset.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dailyfresh/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        <state relative-caret-position="391">
+          <caret line="24" column="64" selection-start-line="24" selection-start-column="64" selection-end-line="24" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/register.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/goods/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+          <folding>
+            <marker date="1551861157634" expanded="true" signature="83:88" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/goods/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="5" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dailyfresh/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
+        <state relative-caret-position="-230">
           <caret line="87" column="21" selection-start-line="87" selection-start-column="21" selection-end-line="87" selection-end-column="21" />
           <folding>
             <element signature="e#383#392#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="25" column="27" selection-start-line="25" selection-start-column="27" selection-end-line="25" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" selection-start-line="6" selection-end-line="8" selection-end-column="87" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/user/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/register.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="348">
+          <caret line="58" column="25" selection-start-line="58" selection-start-column="25" selection-end-line="58" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/user/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="28" column="8" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="8" />
+          <folding>
+            <element signature="e#0#45#0" expanded="true" />
+            <marker date="1551865269295" expanded="true" signature="229:249" ph="..." />
+            <marker date="1551865269295" expanded="true" signature="276:285" ph="..." />
           </folding>
         </state>
       </provider>
