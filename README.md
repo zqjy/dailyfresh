@@ -8,3 +8,17 @@ celery -A celery_tasks.tasks worker -l info
 mysql -u root -p dailyfresh < dailyfresh.sql # 导入数据
 mysql -u root -p dailyfresh > dailyfresh.sql # 导出数据
 \. ~/python/dailyfresh.sql # 执行sql文件
+
+/usr/bin/fdfs_trackerd /etc/fdfs/tracker.conf start  # 开启tracker
+/usr/bin/fdfs_storaged /etc/fdfs/storage.conf start  # 开启storage
+fdfs_upload_file /etc/fdfs/client.conf cat.jpg  # 测试fastdfs
+
+sudo /usr/local/nginx/sbin/nginx   # 开启nginx
+sudo apt-get install libpcre3 libpcre3-dev # 安装nginx 报错pcre
+tar -xvzf zlib-1.2.11.tar.gz # 安装nginx报错zlib
+cd zlib-1.2.11
+./configure --prefix=/usr/local
+make
+sudo make install
+
+sudo redis-server /usr/local/redis/redis.conf 
