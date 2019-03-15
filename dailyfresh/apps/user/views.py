@@ -149,7 +149,7 @@ class UserInfoView(LoginRequiredMixin, View):
         sku_ids = conn.lrange(history_key, 0, 4)
         goods_li = []
         for id in sku_ids:
-            goods = GoodsSKU().objects.get(id=id)
+            goods = GoodsSKU.objects.get(id=id)
             goods_li.append(goods)
         return render(request, 'user_center_info.html', {"page": "user", "address": address, "goods_li": goods_li})
 
