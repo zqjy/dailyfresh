@@ -32,3 +32,5 @@ make
 sudo make install
 
 sudo redis-server /usr/local/redis/redis.conf 
+
+python manage.py rebuild_index # 创建索引
