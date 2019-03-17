@@ -100,6 +100,7 @@ class ListView(View):
     """
     商品列表页
     """
+
     def get(self, request, type_id, page):
         types = GoodsType.objects.all()
         try:
@@ -121,17 +122,33 @@ class ListView(View):
 
         paginator = Paginator(skus, 1)
 
-        print("*"*30)
         try:
             page = int(page)
         except:
             page = 1
 
-        if page > paginator.num_pages:
+        max_page = paginator.num_pages
+        if page > max_page:
             page = 1
 
-
         skus_page = paginator.page(page)
+
+        # 自定义页码显示的数量
+        if page <= 3:
+            if max_page >= 5:
+                pages = range(1, 6)
+            else:
+                pages = range(1, max_page + 1)
+        elif page > max_page - 2:
+            if max_page >= 5:
+                pages = range(max_page - 4, max_page + 1)
+            else:
+                pages = range(1, max_page + 1)
+        else:
+            if page + 3 <= max_page:
+                pages = range(page - 2, page + 3)
+            else:
+                pages = range(page - 2, max_page + 1)
 
         user = request.user
         cart_count = 0
@@ -147,5 +164,6 @@ class ListView(View):
             "new_skus": new_skus,
             "skus_page": skus_page,
             "sort": sort,
+            "pages": pages,
         }
         return render(request, "list.html", context)

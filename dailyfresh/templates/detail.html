@@ -39,8 +39,9 @@
             </div>
 			<div class="total">总价：<em>16.80元</em></div>
 			<div class="operate_btn">
+                {% csrf_token %}
 				<a href="javascript:;" class="buy_btn">立即购买</a>
-				<a href="javascript:;" class="add_cart" id="add_cart">加入购物车</a>				
+				<a href="javascript:;" skuid="{{ sku.id }}" class="add_cart" id="add_cart">加入购物车</a>
 			</div>
 		</div>
 	</div>
@@ -89,7 +90,8 @@
 	<div class="add_jump"></div>
 {% endblock bottom %}
 {% block bottomfiles %}
-	<script type="text/javascript" src="{% static 'js/jquery-1.12.2.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/jquery-1.12.4.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/jsDetail.js' %}"></script>
 	<script type="text/javascript">
 		var $add_x = $('#add_cart').offset().top;
 		var $add_y = $('#add_cart').offset().left;
@@ -97,17 +99,37 @@
 		var $to_x = $('#show_count').offset().top;
 		var $to_y = $('#show_count').offset().left;
 
-		$(".add_jump").css({'left':$add_y+80,'top':$add_x+10,'display':'block'})
-		$('#add_cart').click(function(){
-			$(".add_jump").stop().animate({
-				'left': $to_y+7,
-				'top': $to_x+7},
-				"fast", function() {
-					$(".add_jump").fadeOut('fast',function(){
-						$('#show_count').html(2);
-					});
+        $(".add_jump").css({'left':$add_y+80,'top':$add_x+10,'display':'block'})
+        $('#add_cart').click(function(){
+            var skuid = $(this).attr("skuid");
+            var num = $(".num_show").val();
+            var csrf = $("input[name=csrfmiddlewaretoken]").val();
 
-			});
-		})
+            jData = {
+                "skuid": skuid,
+                "num": num,
+                "csrfmiddlewaretoken": csrf
+            }
+
+            $.post("{% url 'cart:add' %}", jData, function(json){
+                type = json["type"];
+                if (type == "err") {
+                    msg = json["errmsg"];
+                    alert("错误信息：" + msg);
+                } else if (type == "success"){
+                    count = json["total_count"];
+                    $(".add_jump").stop().animate({
+                            'left': $to_y+7,
+                            'top': $to_x+7},
+                            "fast", function() {
+                                $(".add_jump").fadeOut('fast',function(){
+                                    $("#show_count").html(count);
+                                });
+                        });
+                }
+            }, "json");
+        });
+
+
 	</script>
 {% endblock bottomfiles %}
