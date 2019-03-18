@@ -53,6 +53,80 @@ class AddCartView(View):
 
         return JsonResponse(ret_json)
 
+# /cart/add
+class UpdateCartView(View):
+    def post(self, request):
+        ret_json = {}
+        user = request.user
+
+        ret_json["type"] = "err"
+        ret_json["errmsg"] = ""
+        if not ret_json["errmsg"] and not user.is_authenticated():
+            ret_json["errmsg"] = "请登入"
+
+        num = request.POST.get("num")
+        skuid = request.POST.get("skuid")
+
+        if not ret_json["errmsg"] and not all([num, skuid]):
+            ret_json["errmsg"] = "数据不完整"
+
+        try:
+            num = int(num)
+        except Exception:
+            ret_json["errmsg"] = "参数格式不正确"
+
+        try:
+            goods = GoodsSKU.objects.get(id=skuid)
+        except GoodsSKU.DoesNotExist:
+            ret_json["errmsg"] = "id: %s, 没有对应商品" % skuid
+
+        conn = get_redis_connection("default")
+
+        cart_key = "cart_%d" % user.id
+
+        if not ret_json["errmsg"] and num > goods.stock:
+            ret_json["errmsg"] = "库存不足"
+
+        if not ret_json["errmsg"]:
+            conn.hset(cart_key, skuid, num)
+            ret_json["type"] = "success"
+            ret_json["num"] = num
+            ret_json["msg"] = "成功"
+
+        return JsonResponse(ret_json)
+
+# /cart/add
+class DelCartView(View):
+    def post(self, request):
+        ret_json = {}
+        user = request.user
+
+        ret_json["type"] = "err"
+        ret_json["errmsg"] = ""
+        if not ret_json["errmsg"] and not user.is_authenticated():
+            ret_json["errmsg"] = "请登入"
+
+        skuid = request.POST.get("skuid")
+
+        if not ret_json["errmsg"] and not all([skuid]):
+            ret_json["errmsg"] = "数据不完整"
+
+        try:
+            goods = GoodsSKU.objects.get(id=skuid)
+        except GoodsSKU.DoesNotExist:
+            ret_json["errmsg"] = "id: %s, 没有对应商品" % skuid
+
+        conn = get_redis_connection("default")
+
+        cart_key = "cart_%d" % user.id
+
+        if not ret_json["errmsg"]:
+            conn.hdel(cart_key, skuid)
+            ret_json["type"] = "del"
+            ret_json["msg"] = "成功"
+
+        return JsonResponse(ret_json)
+
 # /cart
 class CartInfoView(LoginRequiredMixin, View):
     def get(self, request):
