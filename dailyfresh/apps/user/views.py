@@ -4,13 +4,16 @@ from django.http import HttpResponse
 from django.core.urlresolvers import reverse
 from django.conf import settings
 from django.contrib.auth import authenticate, login, logout
+from django.core.paginator import Paginator
 from user.models import User, Address
 from goods.models import GoodsSKU
+from order.models import OrderInfo, OrderGoods
 from itsdangerous import TimedJSONWebSignatureSerializer as Serializer
 from itsdangerous import SignatureExpired
 from celery_tasks.tasks import send_register_active_email
 from utils.mixin import LoginRequiredMixin
 from django_redis import get_redis_connection
+
 import re
 
 
@@ -159,8 +162,54 @@ class UserOrderView(LoginRequiredMixin, View):
     用户信息视图类
     """
 
-    def get(self, request):
-        return render(request, 'user_center_order.html', {"page": "order"})
+    def get(self, request, page):
+
+        user = request.user
+        order_li = OrderInfo.objects.filter(user=user)
+        for order in order_li:
+            # print("order_id, ", order.order_id)
+            goods_order_li = OrderGoods.objects.filter(order=order)
+            for goods in goods_order_li:
+                goods.amount = goods.count * goods.price
+            order.status_name = OrderInfo.ORDER_STATUS[order.order_status]
+            order.goods_order_li = goods_order_li
+
+        paginator = Paginator(order_li, 1)
+        try:
+            page = int(page)
+        except:
+            page = 1
+
+        max_page = paginator.num_pages
+        if page > max_page:
+            page = 1
+
+        order_page = paginator.page(page)
+
+        # 自定义页码显示的数量
+        if page <= 3:
+            if max_page >= 5:
+                pages = range(1, 6)
+            else:
+                pages = range(1, max_page + 1)
+        elif page > max_page - 2:
+            if max_page >= 5:
+                pages = range(max_page - 4, max_page + 1)
+            else:
+                pages = range(1, max_page + 1)
+        else:
+            if page + 3 <= max_page:
+                pages = range(page - 2, page + 3)
+            else:
+                pages = range(page - 2, max_page + 1)
+
+        context = {
+            "page": "order",
+            "order_li": order_li,
+            "pages": pages,
+            "order_page": order_page,
+        }
+        return render(request, 'user_center_order.html', context)
 
 
 class UserAddressView(LoginRequiredMixin, View):
