@@ -32,8 +32,8 @@ class IndexView(View):
                 image_banners = IndexTypeGoodsBanner.objects.filter(type=type, display_type=1).order_by("index")
                 type.title_banners = title_banners
                 type.image_banners = image_banners
-                for a in image_banners:
-                    print(a.sku.id, a.sku.name)
+                # for a in image_banners:
+                #     print(a.sku.id, a.sku.name)
             context = {
                 "types": types,
                 "goods_banners": goods_banners,
